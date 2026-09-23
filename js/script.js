@@ -1,3 +1,4 @@
+"use script";
 // Husk fra dag 1: skriv "use strict" herunder
 
 
@@ -14,6 +15,14 @@ function tjekGratisService(brand, year) {
     // Ellers:
     //   - sæt harGratisService til false
     //   - log `${brand} fra ${year} får ikke gratis service.`
+
+    if ((brand === `Volswagen` || brand === `Skoda`) && (year <2023))
+    {
+        harGratisService = true;
+        console.log (`${brand} fra ${year} får gratis service i 1 år`)
+    } else {
+        console.log (`${brand} fra ${year} får ikke gratis service`)
+    }
 
 }
 
